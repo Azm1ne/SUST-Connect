@@ -1,5 +1,5 @@
 import React from 'react'
-const App = ()=>{
+const Layout = ()=>{
   return(
     <div>
 

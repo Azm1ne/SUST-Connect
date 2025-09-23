@@ -1,5 +1,5 @@
 import React from 'react'
-const App = ()=>{
+const CreatePost = ()=>{
   return(
     <div>
 
