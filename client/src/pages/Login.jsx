@@ -1,64 +1,64 @@
 import React from "react";
+import { assets } from "../assets/assets";
+import { Star } from "lucide-react";
+import { SignIn } from "@clerk/clerk-react";
 
 const Login = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100">
-      <div className="flex w-full max-w-6xl items-center justify-between px-8">
-        {/* Left Side - Text Section */}
-        <div className="max-w-md">
-          <h1 className="text-2xl font-semibold text-gray-800">SUST Connect</h1>
-          <p className="text-sm text-yellow-600 mt-4">⭐⭐⭐⭐⭐ Used by 12k+ SUSTians</p>
-          <h2 className="text-4xl font-bold mt-6 text-gray-900 leading-snug">
-            More than just news <br /> truly connect
-          </h2>
-          <p className="mt-4 text-gray-700">
-            Connect with the SUSTian community on SUST Connect.
+    <div className="min-h-screen flex flex-col md:flex-row">
+      <img
+        src={assets.bgImage}
+        alt=""
+        className="absolute top-0 left-0 -z-1 w-full
+        h-full object-cover"
+      ></img>
+
+      <div className="flex-1 flex flex-col items-start justify-between p-6 md:p-10 lg:pl-40">
+        <img src={assets.logo} className="h-12 object-contain" />
+        <div>
+          <div className="flex items-center gap-3 mb-4 max-md:mt-10">
+            <img src={assets.group_users} alt="" className="h-8 md:h-10" />
+            <div>
+              <div className="flex">
+                {Array(5)
+                  .fill(0)
+                  .map((_, i) => (
+                    <Star
+                      key={i}
+                      className="size-4 md:size-4.5 text-transparent 
+                        fill-amber-500"
+                    />
+                  ))}
+              </div>
+              <p>Used by 5k+ Developers</p>
+            </div>
+          </div>
+          <h1
+            className="
+            text-3xl md:text-6xl md:pb-2 font-bold 
+            bg-gradient-to-r 
+            from-indigo-950 to-indigo-800 
+            bg-clip-text text-transparent 
+          "
+          >
+            More than just friends truly connect
+          </h1>
+          <p
+            className="
+            text-xl md:text-3xl 
+            text-indigo-900 
+            max-w-72 md:max-w-md
+          "
+          >
+            Connect with global community on pingup.
           </p>
         </div>
-
-        {/* Right Side - Login Card */}
-        <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-sm">
-          <h3 className="text-xl font-semibold text-center text-gray-800">
-            Sign in to
-          </h3>
-          <p className="text-sm text-center text-gray-500 mb-6">
-            Welcome back! Please sign in to continue
-          </p>
-
-          <form className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Email address
-              </label>
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:outline-none"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Password
-              </label>
-              <input
-                type="password"
-                placeholder="Password here"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:outline-none"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 rounded-lg font-medium mt-4"
-            >
-              Continue →
-            </button>
-          </form>
-        </div>
+        <span className="md:h-10"></span>
+      </div> 
+      <div className="flex-1 flex items-center justify-center p-6 sm:p-10">
+          <SignIn/>
       </div>
     </div>
   );
 };
-
 export default Login;

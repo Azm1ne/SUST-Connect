@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// Import components from the pages folder
 import Login from './pages/Login.jsx';
 import Feed from './pages/Feed.jsx';
 import Messages from './pages/Messages.jsx';
@@ -10,11 +9,13 @@ import Connections from './pages/Connections.jsx';
 import Discover from './pages/Discover.jsx';
 import Profile from './pages/Profile.jsx';
 import CreatePost from './pages/CreatePost.jsx';
-
+import { useUser } from '@clerk/clerk-react';
+import { Layout } from 'lucide-react';
 const App = () => {
+  const {user} = useUser();
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
+      <Route path="/" element={ !user ? <Login /> : <Layout/> } />
       <Route path="/feed" element={<Feed />} />
       <Route path="/messages" element={<Messages />} />
       <Route path="/messages/:userId" element={<ChatBox />} />
