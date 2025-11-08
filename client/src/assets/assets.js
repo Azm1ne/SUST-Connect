@@ -1,10 +1,14 @@
 import logo from './logo.png'
 import sample_cover from './sample_cover.jpg'
 import sample_profile from './sample_profile.jpg'
+import Rubayet from './rubayet_profile.jpg'
+import sample_post from './sample_post.jpg'
 import bgImage from './bgImage.png'
 import group_users from './group_users.png'
+import John_Wick from './john_wick.jpg'
 import { Home, MessageCircle, Search, UserIcon, Users } from 'lucide-react'
 import sponsored_img from './sponsored_img.png'
+import Azmine from './azmine_profile.jpg'
 
 export const assets = {
     logo,
@@ -26,35 +30,44 @@ export const menuItemsData = [
 export const dummyUserData = {
     "_id": "user_2zdFoZib5lNr614LgkONdD8WG32",
     "email": "admin@example.com",
-    "full_name": "John Warren",
-    "username": "john_warren",
+    "full_name": "Md Mashrafi",
+    "username": "mdmrafi",
     "bio": "🌍 Dreamer | 📚 Learner | 🚀 Doer\r\nExploring life one step at a time.\r\n✨ Staying curious. Creating with purpose.",
     "profile_picture": sample_profile,
     "cover_photo": sample_cover,
-    "location": "New York, NY",
+    "location": "Dhaka, Bangladesh",
     "followers": ["user_2", "user_3"],
     "following": ["user_2", "user_3"],
     "connections": ["user_2", "user_3"],
     "posts": [],
     "is_verified": true,
-    "createdAt": "2025-07-09T09:26:59.231Z",
-    "updatedAt": "2025-07-21T06:56:50.017Z",
+    "createdAt": "2025-11-09T09:26:59.231Z",
+    "updatedAt": "2025-11-21T06:56:50.017Z",
 }
 
 const dummyUser2Data = {
     ...dummyUserData,
     _id: "user_2",
-    username: "Richard Hendricks",
-    full_name: "Richard Hendricks",
-    profile_picture: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
+    username: "azm1ne",
+    full_name: "Mohammed Bin Monjur Azmine",
+    profile_picture: Azmine,
 }
 
 const dummyUser3Data = {
     ...dummyUserData,
     _id: "user_3",
-    username: "alexa_james",
-    full_name: "Alexa james",
-    profile_picture: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop",
+    username: "mr_tasnim",
+    full_name: "Md Rubayet Tasnim",
+    profile_picture:Rubayet 
+}
+
+const dummyUser4Data = {
+    ...dummyUserData,
+    "bio": "Canadian actor and musician",
+    _id: "user_4",
+    username: "unknown",
+    full_name: "John Wick",
+    profile_picture:John_Wick, 
 }
 
 export const dummyStoriesData = [
@@ -65,8 +78,8 @@ export const dummyStoriesData = [
         "media_url": "",
         "media_type": "text",
         "background_color": "#4f46e5",
-        "createdAt": "2025-07-25T08:16:06.958Z",
-        "updatedAt": "2025-07-25T08:16:06.958Z",
+        "createdAt": "2025-11-09T08:16:06.958Z",
+        "updatedAt": "2025-11-09T08:16:06.958Z",
     },
     {
         "_id": "688340046e4b42b685068a73",
@@ -75,8 +88,8 @@ export const dummyStoriesData = [
         "media_url": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
         "media_type": "image",
         "background_color": "#4f46e5",
-        "createdAt": "2025-07-25T08:27:48.134Z",
-        "updatedAt": "2025-07-25T08:27:48.134Z",
+        "createdAt": "2025-11-09T08:27:48.134Z",
+        "updatedAt": "2025-11-09T08:27:48.134Z",
     },
     {
         "_id": "68833fe96e4b42b685068a5e",
@@ -85,8 +98,8 @@ export const dummyStoriesData = [
         "media_url": "https://videos.pexels.com/video-files/14447442/14447442-hd_1080_1920_30fps.mp4",
         "media_type": "video",
         "background_color": "#4f46e5",
-        "createdAt": "2025-07-25T08:27:21.289Z",
-        "updatedAt": "2025-07-25T08:27:21.289Z",
+        "createdAt": "2025-11-09T08:27:21.289Z",
+        "updatedAt": "2025-11-09T08:27:21.289Z",
     },
     {
         "_id": "68833e136e4b42b685068937",
@@ -95,8 +108,8 @@ export const dummyStoriesData = [
         "media_url": "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
         "media_type": "image",
         "background_color": "#4f46e5",
-        "createdAt": "2025-07-25T08:19:31.080Z",
-        "updatedAt": "2025-07-25T08:19:31.080Z",
+        "createdAt": "2025-11-09T08:19:31.080Z",
+        "updatedAt": "2025-11-09T08:19:31.080Z",
     },
     {
         "_id": "68833d706e4b42b685068875",
@@ -105,8 +118,8 @@ export const dummyStoriesData = [
         "media_url": "",
         "media_type": "text",
         "background_color": "#4f46e5",
-        "createdAt": "2025-07-25T08:16:48.617Z",
-        "updatedAt": "2025-07-25T08:16:48.617Z",
+        "createdAt": "2025-10-25T08:16:48.617Z",
+        "updatedAt": "2025-10-25T08:16:48.617Z",
     },
     {
         "_id": "68833c9e6e4b42b6850687e7",
@@ -125,9 +138,9 @@ export const dummyPostsData = [
     {
         "_id": "68773e977db16954a783839c",
         "user": dummyUserData,
-        "content": "We're a small #team with a big vision — working day and night to turn dreams into products, and #products into something people love.",
+        "content": "Be ready for the upcoming events on CSE Carnival, organizing by CSE Society #CSESociety #Programmers",
         "image_urls": [
-            "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg"
+            sample_post
         ],
         "post_type": "text_with_image",
         "likes_count": [],
@@ -236,8 +249,8 @@ export const dummyMessagesData = [
         "text": "",
         "message_type": "image",
         "media_url": "https://images.pexels.com/photos/106341/pexels-photo-106341.jpeg",
-        "createdAt": "2025-07-17T10:10:58.524Z",
-        "updatedAt": "2025-07-25T10:43:50.346Z",
+        "createdAt": "2025-11-07T10:10:58.524Z",
+        "updatedAt": "2025-11-07T10:43:50.346Z",
         "seen": true
     },
     {
@@ -247,8 +260,8 @@ export const dummyMessagesData = [
         "text": "This is a Samsung Tablet",
         "message_type": "text",
         "media_url": "",
-        "createdAt": "2025-07-17T10:11:08.437Z",
-        "updatedAt": "2025-07-25T10:43:50.346Z",
+        "createdAt": "2025-11-05T10:11:08.437Z",
+        "updatedAt": "2025-11-05T10:43:50.346Z",
         "seen": true
     },
     {
@@ -278,7 +291,7 @@ export const dummyMessagesData = [
 export const dummyConnectionsData = [
     dummyUserData,
     dummyUser2Data,
-    dummyUser3Data
+    dummyUser3Data,
 ]
 
 export const dummyFollowersData = [
@@ -288,9 +301,11 @@ export const dummyFollowersData = [
 
 export const dummyFollowingData = [
     dummyUser2Data,
-    dummyUser3Data
+    dummyUser3Data,
+    dummyUser4Data
 ]
 
 export const dummyPendingConnectionsData = [
-    dummyUserData
+    dummyUserData,
+    dummyUser4Data
 ]

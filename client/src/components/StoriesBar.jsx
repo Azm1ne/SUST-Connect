@@ -20,9 +20,11 @@ const StoriesBar = () => {
   return (
     <div className="w-screen sm:w-[calc(100vw-200px)] lg:max-w-2xl no-scrollbar overflow-x-auto px-4 flex gap-4">
       {/* Add Story Card */}
-      <div onClick={()=>{setShowModal(true)}} className="rounded-lg shadow-sm min-w-[160px] max-w-[160px] max-h-40 aspect-[3/4] cursor-pointer hover:shadow-lg transition-all duration-200 border-2 border-dashed border-indigo-300 bg-gradient-to-b from-indigo-50 to-white">
+      <div onClick={()=>{setShowModal(true)}} className="rounded-lg shadow-sm min-w-[160px] max-w-[160px] 
+      max-h-40 aspect-[3/4] cursor-pointer hover:shadow-lg transition-all duration-200 
+      border-2 border-dashed border-green-300 bg-gradient-to-b from-green-100 to-white">
         <div className="h-full flex flex-col items-center justify-center p-4">
-          <div className="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center mb-3">
+          <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mb-3">
             <Plus className="w-5 h-5 text-white" />
           </div>
           <p className="text-sm font-medium text-slate-700 text-center">
@@ -35,7 +37,10 @@ const StoriesBar = () => {
         <div
           onClick={()=>setViewStory(story)}
           key={index}
-          className="relative rounded-lg shadow min-w-[120px] max-w-[160px] max-h-40 cursor-pointer hover:shadow-lg transition-all duration-200 bg-gradient-to-b from-indigo-500 to-purple-600 hover:from-indigo-700 hover:to-purple-800 active:scale-95"
+          className="relative rounded-lg shadow min-w-[120px] max-w-[160px] max-h-40 
+          cursor-pointer hover:shadow-lg transition-all duration-200 bg-gradient-to-b 
+          from-green-500 to-green-600 hover:from-green-700 hover:to-green-800 
+          active:scale-95"
         >
           <img
             src={story.user.profile_picture}
