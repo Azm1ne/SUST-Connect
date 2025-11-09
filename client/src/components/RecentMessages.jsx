@@ -44,7 +44,7 @@ const RecentMessages = () => {
                 </p>
                 {!message.seen && (
                   <p
-                    className="bg-indigo-500 text-white w-5 h-5 flex items-center justify-center rounded-full text-[10px] ml-2"
+                    className="bg-green-500 text-white w-5 h-5 flex items-center justify-center rounded-full text-[10px] ml-2"
                     title="unread"
                   >
                     1

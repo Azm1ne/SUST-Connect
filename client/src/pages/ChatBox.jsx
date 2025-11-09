@@ -1,5 +1,6 @@
-import React, { use } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { dummyMessagesData, dummyUserData } from "../assets/assets";
+import { Image as ImageIcon, SendHorizontal } from "lucide-react";
 
 const ChatBox = () => {
   const messages = dummyMessagesData;
@@ -9,21 +10,18 @@ const ChatBox = () => {
   const messagesEndRef = useRef(null);
 
   const sendMessage = () => {};
-  useffect(() => {
+  useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   return (
     user && (
       <div className="flex flex-col h-screen">
-        <div
-          className="flex items-center gap-2 p-2 md:px-10 x1:p1-42
-bg-gradient-to-r from-indigo-50 to-purple-50 border-b border-gray-300"
-        >
+            <div className="flex items-center gap-2 p-2 md:px-10 xl:px-12 bg-gradient-to-r from-indigo-50 to-purple-50 border-b border-gray-300">
           <img
-            src={user.profile_picture}
-            alt=""
-            className="size-8 rounded-full"
+                src={user.profile_picture}
+                alt=""
+                className="w-8 h-8 rounded-full"
           />
           <div>
             <p className="font-medium">{user.full_name}</p>
@@ -31,10 +29,11 @@ bg-gradient-to-r from-indigo-50 to-purple-50 border-b border-gray-300"
           </div>
         </div>
         <div className="p-5 md:px-10 h-full overflow-y-scroll">
-          <div className="space-y-4 max-w-4x1 mx-auto">
-            {messages
-              .toSorted((a, b) => new Date(a.createdAt) - new Date(b.createdAt))
-              .map((message, index) => (
+              <div className="space-y-4 max-w-4xl mx-auto">
+                {messages
+                  .slice()
+                  .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))
+                  .map((message, index) => (
                 <div
                   key={index}
                   className={`flex flex-col ${
@@ -45,8 +44,8 @@ bg-gradient-to-r from-indigo-50 to-purple-50 border-b border-gray-300"
                 >
                   <div
                     className={`p-2 text-sm max-w-sm bg-white text-slate-700
-rounded-lg shadow ${
-                      message.to_user_id !== user_id
+                    rounded-lg shadow ${
+                      message.to_user_id !== user._id
                         ? "rounded-bl-none"
                         : "rounded-br-none"
                     }`}
@@ -68,7 +67,7 @@ rounded-lg shadow ${
         <div className="px-4">
           <div
             className="flex items-center gap-3 pl-5 p-1.5 bg-white w-full
-max-w-xl mx-auto border border-gray-200 shadow rounded-full mb-5"
+            max-w-xl mx-auto border border-gray-200 shadow rounded-full mb-5"
           >
             <input
               type="text"
@@ -81,14 +80,9 @@ max-w-xl mx-auto border border-gray-200 shadow rounded-full mb-5"
 
             <label htmlFor="image">
               {image ? (
-                <img
-                  src={URL.createObjectURL(image)}
-                  alt=""
-                  className="h-8
-    rounded"
-                />
+                <img src={URL.createObjectURL(image)} alt="" className="h-8 rounded" />
               ) : (
-                <ImageIcon className="size-7 text-gray-400 cursor-pointer" />
+                <ImageIcon className="w-6 h-6 text-gray-400 cursor-pointer" />
               )}
               <input
                 type="file"
@@ -101,10 +95,10 @@ max-w-xl mx-auto border border-gray-200 shadow rounded-full mb-5"
             <button
               onClick={sendMessage}
               className="bg-gradient-to-br
-from-indigo-500 to-purple-600 hover:from-indigo-700 hover:to-purple-800
-active:scale-95 cursor-pointer text-white p-2 rounded-full"
+            from-indigo-500 to-purple-600 hover:from-indigo-700 hover:to-purple-800
+              active:scale-95 cursor-pointer text-white p-2 rounded-full"
             >
-              <SendHorizonal size={18} />
+              <SendHorizontal size={18} />
             </button>
           </div>
         </div>

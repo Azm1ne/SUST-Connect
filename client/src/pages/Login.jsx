@@ -37,7 +37,7 @@ const Login = () => {
             className="
             text-3xl md:text-6xl md:pb-2 font-bold 
             bg-gradient-to-r 
-            from-indigo-950 to-indigo-800 
+            from-green-900 to-green-600
             bg-clip-text text-transparent 
           "
           >
@@ -46,7 +46,7 @@ const Login = () => {
           <p
             className="
             text-xl md:text-3xl 
-            text-indigo-900 
+            text-green-900 
             max-w-72 md:max-w-md
           "
           >

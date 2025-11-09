@@ -28,7 +28,7 @@ const Sidebar = ({sidebarOpen,setSidebarOpen}) => {
         <hr className="border-gray-300 mb-8" />
         <MenuItems setSidebarOpen={setSidebarOpen}/>
         <Link to='/create-post' className='flex items-center justify-center gap-2 py-2.5 mt-6 mx-6 rounded-lg 
-        bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-500 hover:to-purple-800 
+        bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 
         active:scale-95 transition text-white cursor-pointer'>
           <CirclePlus className="w-5 h-5"/>
           Create Post
